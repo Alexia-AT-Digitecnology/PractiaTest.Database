@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace PractiaTest.Database.Entities
 {
-    public partial class InvoicingDBContext : DbContext
+    public partial class ApplicationDbContext : DbContext
     {
         private readonly ILoggerFactory _loggerFactory;
         public virtual DbSet<Client> Client { get; set; }
@@ -14,16 +14,16 @@ namespace PractiaTest.Database.Entities
         public virtual DbSet<InvoiceDetail> InvoiceDetail { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         
-        public InvoicingDBContext()
+        public ApplicationDbContext()
         {
         }
         
-        public InvoicingDBContext(ILoggerFactory loggerFactory)
+        public ApplicationDbContext(ILoggerFactory loggerFactory)
         {
             _loggerFactory = loggerFactory;
         }
 
-        public InvoicingDBContext(DbContextOptions<InvoicingDBContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
