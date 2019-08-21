@@ -9,10 +9,10 @@ namespace PractiaTest.Database.Entities
     public partial class ApplicationDbContext : DbContext
     {
         private readonly ILoggerFactory _loggerFactory;
-        public virtual DbSet<Client> Client { get; set; }
-        public virtual DbSet<Invoice> Invoice { get; set; }
-        public virtual DbSet<InvoiceDetail> InvoiceDetail { get; set; }
-        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<Client> Clients { get; set; }
+        public virtual DbSet<Invoice> Invoices { get; set; }
+        public virtual DbSet<InvoiceDetail> InvoiceDetails { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
         
         public ApplicationDbContext()
         {
